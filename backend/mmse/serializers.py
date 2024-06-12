@@ -24,3 +24,7 @@ class SurveyResponseSerializer(serializers.ModelSerializer):
             elif value == 3:
                 mapped_data[key] = 3  # Applied to me very much, or most of the time
         return mapped_data
+
+class LoginSerializer(serializers.Serializer):
+    username = serializers.CharField()
+    password = serializers.CharField(style={'input_type': 'password'}, write_only=True)
