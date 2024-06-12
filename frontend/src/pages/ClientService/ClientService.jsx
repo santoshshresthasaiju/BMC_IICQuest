@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import data from "../../Data/FetchData";
 import bgImage from '../../assets/bg.png';
 import ClientTop from "../../components/ClientServiceTop/ClientTop";
-import ClientButton from "../../components/ClientServiceTop/ClientButton";
 
 // import Parallal from "../../components/Parallal/Parallal";
 
@@ -71,7 +70,6 @@ export default function ClientService() {
         )}
         </div>
       </div>
-      <ClientButton />
     </div>
   );
 }
