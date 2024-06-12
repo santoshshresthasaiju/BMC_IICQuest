@@ -7,21 +7,21 @@ import './App.css'
 
 import Home from './pages/Home/Home'
 import Header from './components/Header/Header'
-import Contact from './pages/Contact/Contact'
+import bgImage from './assets/bg.png';
 
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div>
       <Header />
       <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/contact" element={<Contact />}/>
       </Routes>
           
-    </>
+    </div>
   )
 }
 
