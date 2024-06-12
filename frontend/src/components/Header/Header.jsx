@@ -1,14 +1,16 @@
 
 import React from 'react'
 import {Link, NavLink} from 'react-router-dom'
+import Logo from '../../assets/logo0.png'
 
-export default function Header() {
+    export default function Header() {
     return (
         <header className="shadow sticky z-50 top-0 h-5">
             <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl pt-5">
-                    <Link to="/" className="flex items-center">
-                        MMSE
+                    <Link to="/" className="display-block vertical-align-middle pt-0">
+                        <img
+                        src={Logo} alt='Logo' />
                     </Link>
                     <div className="flex items-center lg:order-2">
                         <Link
