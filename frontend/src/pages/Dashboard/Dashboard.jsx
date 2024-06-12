@@ -1,11 +1,14 @@
 import React from 'react'
 
 export default function Dashboard() {
+    const handleLogout = () => {
+        window.location.href = '/login'; // Redirect to login page
+      };
   return (
     <div>
   <meta charSet="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard Example</title>
+  <title>Dashboard </title>
   {/* Include Tailwind CSS */}
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <div className="flex h-screen">
@@ -24,8 +27,10 @@ export default function Dashboard() {
             <a href="#" className="block hover:bg-gray-700 px-4">Settings</a>
           </li>
           <li className="py-2">
-            <a href="#" className="block hover:bg-gray-700 px-4">Logout</a>
-          </li>
+                <a href="#" onClick={handleLogout} className="block hover:bg-gray-700 px-4">
+                  Logout
+                </a>
+              </li>
         </ul>
       </div>
     </div>
