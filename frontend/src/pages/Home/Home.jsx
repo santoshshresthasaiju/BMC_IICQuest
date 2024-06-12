@@ -6,7 +6,7 @@ import Service from '../../components/Services/Services';
 
 export default function Home() {
     return (
-        <div style={{ backgroundImage: `url(${bgImage})` }} >
+        <div className="bg-no-repeat bg-cover" style={{ backgroundImage: `url(${bgImage})` }} >
         <div className="mx-auto w-full max-w-7xl ">
             <aside className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-16 h-svh">
                 <div className="relative z-10 max-w-screen-xl px-4  pb-20 pt-10 sm:py-24 mx-auto sm:px-6 lg:px-8">

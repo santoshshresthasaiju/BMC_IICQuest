@@ -6,8 +6,9 @@ import './App.css'
 
 
 import Home from './pages/Home/Home'
+import ClientService from './pages/ClientService/ClientService'
 import Header from './components/Header/Header'
-import bgImage from './assets/bg.png';
+
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
       <Header />
       <Routes>
           <Route path="/" element={<Home />}/>
+          {/* <Route path="/aboutus" element={<About />}/> */}
+          <Route path="/clientservice" element={<ClientService />}/>
       </Routes>
           
     </div>
