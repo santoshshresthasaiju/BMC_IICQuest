@@ -7,6 +7,7 @@ import './App.css'
 
 import Home from './pages/Home/Home'
 import Header from './components/Header/Header'
+import Contact from './pages/Contact/Contact'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Header />
       <Routes>
           <Route path="/" element={<Home />}/>
+          <Route path="/contact" element={<Contact />}/>
       </Routes>
           
     </>
