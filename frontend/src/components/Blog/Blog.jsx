@@ -1,10 +1,12 @@
+import logo from '../../assets/hlog2.jpg' 
+
 function Blog(){
     return(
 <section class="text-gray-600 body-font">
   <div class="container px-5 py-24 mx-auto flex flex-col">
     <div class="lg:w-4/6 mx-auto">
       <div class="rounded-lg h-64 overflow-hidden">
-        <img alt="content" class="object-cover object-center h-full w-full" src=""/>
+        <img alt="content" class="object-cover object-center h-full w-full" src={logo}/>
       </div>
       <div class="flex flex-col sm:flex-row mt-10">
         <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">

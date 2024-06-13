@@ -4,13 +4,6 @@ import viteLogo from '/vite.svg';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css'
 
-
-import Home from './pages/Home/Home'
-import ClientService from './Dashboardes/ClientService/ClientService'
-import Assessment from './Dashboardes/Assessment/Assessment'
-import Header from './components/Header/Header'
-
-import Contact from './pages/Contact/Contact'
 import LoginForm from './pages/Login/Login'
 import Home from './pages/Home/Home';
 import ClientService from './Dashboardes/ClientService/ClientService';
@@ -19,7 +12,6 @@ import Header from './components/Header/Header';
 import About from './components/About/About';
 import Footer from './components/Footer/Footer';
 import Blog from './components/Blog/Blog';
-import bgImage from './assets/bg.png';
 import Contact from './pages/Contact/Contact';
 
 import Dashboard from './Dashboardes/Dashboard/Dashboard';
