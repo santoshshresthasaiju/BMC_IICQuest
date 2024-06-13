@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import home1 from '../../assets/home1.png';
 import bgImage from '../../assets/bg.png';
 import Service from '../../components/Services/Services';
+import Chatbox from '../../Chatbox/Chatbox';
 
 export default function Home() {
     return (
@@ -39,6 +40,7 @@ export default function Home() {
 
         </div>
         <Service />
+        <Chatbox/>
         </div>
             
        
