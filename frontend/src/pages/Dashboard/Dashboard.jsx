@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function Dashboard() {
+    
     const handleLogout = () => {
         window.location.href = '/login'; // Redirect to login page
       };
