@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
-    'mmse'
+    'mmse',
 ]
 
 # Add token authentication to Django REST Framework
