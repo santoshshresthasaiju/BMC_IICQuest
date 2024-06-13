@@ -6,11 +6,13 @@ import './App.css'
 
 
 import Home from './pages/Home/Home'
+import ClientService from './Dashboardes/ClientService/ClientService'
+import Assessment from './Dashboardes/Assessment/Assessment'
 import Header from './components/Header/Header'
 import bgImage from './assets/bg.png';
 import Contact from './pages/Contact/Contact'
 import LoginForm from './pages/Login/Login'
-import Dashboard from './pages/Dashboard/Dashboard';
+import Dashboard from './Dashboardes/Dashboard/Dashboard';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -20,8 +22,10 @@ function App() {
       <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/contact" element={<Contact />}/>
+          <Route path="/services" element={<ClientService />}/>
+          <Route path="/assessment"  element={<Assessment />}/>
           <Route path="/login" element={<LoginForm />}/>
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard"  element={<Dashboard />} />
       </Routes>
           
     </div> 

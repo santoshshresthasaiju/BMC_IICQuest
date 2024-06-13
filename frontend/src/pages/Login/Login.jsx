@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 
-export default function LoginForm() {
+export default function LoginForm({bgImage}) {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -36,7 +36,7 @@ export default function LoginForm() {
 
   return (
     <>
-      <section className="text-gray-600 body-font bg-amber-400 min-h-full">
+      <section className="text-gray-600 body-font" style={{ backgroundImage: `url(${bgImage})`}}>
         <div className="container px-5 py-24 mx-auto flex flex-wrap items-center justify-between bg-orange-300">
           <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
             <h1 className="title-font font-medium text-3xl text-gray-900">
