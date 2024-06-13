@@ -1,18 +1,23 @@
 
 import React from 'react'
 import {Link, NavLink} from 'react-router-dom'
+import Logo from '../../assets/logo0.png'
 import bgImage from '../../assets/bg.png';
 import logo from '../../assets/logo1.png';
 
 
 
-export default function Header() {
+    export default function Header() {
     return (
          <header className="shadow sticky z-50 top-0 h-24 " style={{ backgroundImage: `url(${bgImage})` }} >
             <nav className=" border-gray-200 px-4 lg:px-6 py-2.5">
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl pt-5">
+                    <Link to="/" className="display-block vertical-align-middle pt-0">
+                        <img
+                        src={Logo} alt='Logo' />
                     <Link to="/" className="flex items-center">
                     <img className="w-1/2" src={logo} alt="image1" />
+
                     </Link>
                     <div className="flex items-center lg:order-2">
                         <Link
@@ -39,7 +44,7 @@ export default function Header() {
                             </li>
                             <li>
                                 <NavLink
-                                to="/aboutus"
+                                to="/about"
                                     className={({isActive}) =>
                                         `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-teal-300" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-teal-300 lg:p-0`
                                     }
@@ -64,7 +69,11 @@ export default function Header() {
                                         `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-teal-300" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-teal-300 lg:p-0`
                                     }
                                 >
+
+                                    Blog
+                                    
                                     CONTACTS
+
                                 </NavLink>
                             </li>
                             <li>
