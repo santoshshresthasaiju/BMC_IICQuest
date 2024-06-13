@@ -14,6 +14,7 @@ import bgImage from './assets/bg.png';
 import Contact from './pages/Contact/Contact';
 import LoginForm from './pages/Login/Login';
 import Dashboard from './Dashboardes/Dashboard/Dashboard';
+import Chatbox from './Chatbox/Chatbox';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +22,7 @@ function App() {
   return (
     <div>
       <Header />
+      
       <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/contact" element={<Contact />}/>
@@ -30,6 +32,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/about" element={<About />}/>
           <Route path ="/blog" element={<Blog/>}/>
+          <Route path='/chatbox' element={<Chatbox/>}/>
         </Routes>
       <Footer />
     </div>    
