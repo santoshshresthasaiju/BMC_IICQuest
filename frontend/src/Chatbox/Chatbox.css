@@ -1,0 +1,28 @@
+/* src/Chatbox.css */
+.chatbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* background-color: #25D366;  */
+    color: white;
+    padding: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+  }
+  
+  .chatbox:hover {
+    background-color: #128C7E; /* Darker WhatsApp green on hover */
+  }
+  .chatbox img {
+    max-height: 50px;
+    max-width: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .chatbox img:hover {
+    transform: scale(1.1); /* Slightly increase the size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+  }
