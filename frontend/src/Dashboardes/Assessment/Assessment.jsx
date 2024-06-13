@@ -35,7 +35,7 @@ export default function Assessment() {
     };
 
     try {
-      const response = await fetch('http://localhost:8000/api/user/', {
+      const response = await fetch('http://localhost:8000/api/responses/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

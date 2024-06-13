@@ -19,7 +19,7 @@ export default function ClientService() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:8000/api/user/', {
+      const response = await fetch('http://localhost:8000/api/patients/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

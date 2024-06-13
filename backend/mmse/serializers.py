@@ -2,6 +2,10 @@
 
 from rest_framework import serializers
 from .models import SurveyResponse, Contact
+from .models import SurveyResponse
+from .models import Patient
+from .models import QuestionnaireResponse
+from .models import AssessmentResponse
 
 class SurveyResponseSerializer(serializers.ModelSerializer):
     class Meta:
@@ -33,3 +37,20 @@ class ContactSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contact
         fields = '__all__'
+        
+class PatientSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Patient
+        fields = ['id','name', 'age']
+        
+        
+class QuestionnaireResponseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = QuestionnaireResponse
+        fields = '__all__'
+        
+        
+class AssessmentResponseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AssessmentResponse
+        fields = ['id', 'score', 'result_comment']
