@@ -2,6 +2,7 @@
 
 from rest_framework import serializers
 from .models import SurveyResponse
+from .models import Patient
 
 class SurveyResponseSerializer(serializers.ModelSerializer):
     class Meta:
@@ -28,3 +29,10 @@ class SurveyResponseSerializer(serializers.ModelSerializer):
 class LoginSerializer(serializers.Serializer):
     username = serializers.CharField()
     password = serializers.CharField(style={'input_type': 'password'}, write_only=True)
+    
+    
+    
+class PatientSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Patient
+        fields = '__all__'
