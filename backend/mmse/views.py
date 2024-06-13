@@ -8,6 +8,9 @@ from rest_framework.authtoken.models import Token
 from .serializers import LoginSerializer
 from django.contrib.auth import login
 from django.http import JsonResponse
+from rest_framework import viewsets,  serializers
+from .models import Contact
+from .serializers import ContactSerializer
 
 @api_view(['POST'])
 def save_survey_response(request):
@@ -36,3 +39,7 @@ class LoginView(APIView):
                 return JsonResponse({'error': 'An error occurred during authentication'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
+class ContactViewSet(viewsets.ModelViewSet):
+    queryset = Contact.objects.all()
+    serializer_class = ContactSerializer

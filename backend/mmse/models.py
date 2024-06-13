@@ -14,3 +14,8 @@ class SurveyResponse(models.Model):
     question_10 = models.IntegerField()
     question_11 = models.IntegerField()
     question_12 = models.IntegerField()
+
+
+class Contact(models.Model):
+    email = models.CharField(max_length=100)
+    message= models.TextField(max_length=500)
