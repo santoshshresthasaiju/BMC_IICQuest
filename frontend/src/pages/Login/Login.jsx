@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
+import bgImage from '../../assets/bg.png';
+import login from '../../assets/loginForm.png';
 
-export default function LoginForm({bgImage}) {
+
+export default function LoginForm() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -36,25 +39,25 @@ export default function LoginForm({bgImage}) {
 
   return (
     <>
-      <section className="text-gray-600 body-font" style={{ backgroundImage: `url(${bgImage})`}}>
-        <div className="container px-5 py-24 mx-auto flex flex-wrap items-center justify-between bg-orange-300">
-          <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
+      <section className="bg-no-repeat bg-cover" style={{ backgroundImage: `url(${bgImage})`}}>
+      <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pt-10  flex flex-col justify-center items-center">
             <h1 className="title-font font-medium text-3xl text-gray-900">
-              Welcome Back!
+              Welcome To LOGIN Page!
             </h1>
             <p className="leading-relaxed mt-4">
               Please enter your credentials to log in.
             </p>
           </div>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="bg-gray-100 rounded-lg p-8 flex flex-col w-full mt-10">
+        <div className="container px-10 mx-16 flex gap-10">
+          <form onSubmit={handleSubmit(onSubmit)} className="w-1/2 h-1/2 ">
+            <div className="bg-white rounded-lg p-8 flex flex-col w-full mt-10 shadow-2xl shadow-teal-800">
               <h2 className="text-gray-900 text-lg font-medium title-font mb-5">
                 Login
               </h2>
               <div className="relative mb-4">
                 <label
                   htmlFor="username"
-                  className="leading-7 text-sm text-gray-600"
+                  className="leading-7 text-sm text-gray-600  "
                 >
                   Username
                 </label>
@@ -63,12 +66,12 @@ export default function LoginForm({bgImage}) {
                   type="text"
                   id="username"
                   name="username"
-                  className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-teal-50  rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
                 {errors.username && <span className="text-red-600">{errors.username.message}</span>}
               </div>
               <div className="relative mb-4">
-                <label htmlFor="password" className="leading-7 text-sm text-gray-600">
+                <label htmlFor="password" className="leading-7 text-sm text-gray-600 ">
                   Password
                 </label>
                 <input
@@ -78,17 +81,24 @@ export default function LoginForm({bgImage}) {
                   type="password"
                   id="password"
                   name="password"
-                  className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-teal-50  rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
                 {errors.password && <span className="text-red-600">{errors.password.message}</span>}
               </div>
               {error && <p className="text-red-600">{error}</p>}
-              <input type="submit" className="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" />
+              <input type="submit" className="text-white bg-teal-500 border-0 py-2 px-6 my-8 focus:outline-none hover:bg-teal-600 rounded text-lg" />
               <p className="text-xs text-gray-500 mt-3">
                 Don't have an account? Sign up now!
               </p>
             </div>
           </form>
+          <div className="lg:w-1/2 w-auto mb-10 lg:mb-0 rounded-lg overflow-hidden">
+            <img
+              alt="feature"
+              className="object-cover object-center pt-6 w-full"
+              src={login}
+            />
+          </div>
         </div>
       </section>
     </>
