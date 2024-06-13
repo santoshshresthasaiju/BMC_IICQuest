@@ -41,14 +41,14 @@ export default function LoginForm() {
     <>
       <section className="bg-no-repeat bg-cover" style={{ backgroundImage: `url(${bgImage})`}}>
       <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pt-10  flex flex-col justify-center items-center">
-            <h1 className="title-font font-medium text-3xl text-gray-900">
+            <h1 className="title-font font-bold text-3xl text-gray-900">
               Welcome To LOGIN Page!
             </h1>
             <p className="leading-relaxed mt-4">
               Please enter your credentials to log in.
             </p>
           </div>
-        <div className="container px-10 mx-16 flex gap-10">
+        <div className="container px-10 mx-16 flex gap-16">
           <form onSubmit={handleSubmit(onSubmit)} className="w-1/2 h-1/2 ">
             <div className="bg-white rounded-lg p-8 flex flex-col w-full mt-10 shadow-2xl shadow-teal-800">
               <h2 className="text-gray-900 text-lg font-medium title-font mb-5">

@@ -1,4 +1,5 @@
 import React from "react";
+import bgImage from '../../assets/bg.png';
 
 import service1 from "../../assets/service1.png";
 
