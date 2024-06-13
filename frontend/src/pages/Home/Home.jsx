@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import home1 from '../../assets/home1.png';
 import bgImage from '../../assets/bg.png';
 import Service from '../../components/Services/Services';
+import Content from '../../components/Content/Content';
 
 export default function Home() {
     return (
@@ -30,12 +31,14 @@ export default function Home() {
                 </div>
             </aside>
 
+            <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+        <h1 class="sm:text-3xl ont-medium title-font mb-2 text-gray-900 font-extrabold  text-8xl">Let's Talk Let's Heal</h1>
+        <div class="h-1 w-20 bg-teal-500 rounded"></div>
+      </div>
 
             <div className="grid  place-items-center sm:mt-20">
-                <img className="sm:w-96 w-48" src="https://i.ibb.co/2M7rtLk/Remote1.png" alt="image2" />
+                <Content />
             </div>
-
-            <h1 className="text-center text-2xl sm:text-5xl py-10 font-medium"></h1>
 
         </div>
         <Service />

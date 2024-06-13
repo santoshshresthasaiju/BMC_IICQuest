@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo1.png'
+import bgImage from '../../assets/bg.png';
 
 export default function Footer() {
     return (
-        <footer className="bg-white border-y">
+        <footer className="bg-white border-y bg-no-repeat bg-cover" style={{ backgroundImage: `url(${bgImage})` }} >
             <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
