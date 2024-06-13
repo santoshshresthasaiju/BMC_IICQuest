@@ -57,7 +57,7 @@ export default function Assessment() {
   return (
     <div className="bg-no-repeat bg-cover" style={{ backgroundImage: `url(${bgImage})` }}>
       <div className="w-full flex flex-col justify-center items-center px-11">
-        <h1 className="font-bold p-9 text-2xl text-teal-500">
+        <h1 className="font-bold p-9 text-2xl text-black">
           Administer Psychological Questionnaires <br /> Track Outcomes, Inform Treatment
         </h1>
         <div className="border-teal-300 flex flex-col items-center justify-center shadow-2xl shadow-emerald-900 w-3/4 py-5">
@@ -102,11 +102,11 @@ export default function Assessment() {
         </div>
       </div>
       {submitted && (
-        <div className="py-20 font-bold text-teal-400 bg-gray-600 px-40">
-          <h1 className="text-5xl">SCORE: {(score / 30) * 100} %</h1>
+        <div className="py-20 font-bold text-teal-400 bg-gray-600 px-40 bg-no-repeat bg-cover" style={{ backgroundImage: `url(${bgImage})` }}>
+          <h1 className="text-5xl"> {()=>setScore(score) } Score= {score.toFixed(2)}</h1>
           <p className="text-5xl">
-            {score <= 83 ? 'MILD/SUBCLINICAL' :
-             score >= 84 && score <= 99.8 ? 'MODERATE' :
+            {score <= 6 ? 'MILD/SUBCLINICAL' :
+             score >= 7 && score <= 12 ? 'MODERATE' :
              'SEVERE'}
           </p>
         </div>

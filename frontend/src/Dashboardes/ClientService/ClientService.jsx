@@ -84,8 +84,11 @@ export default function ClientService() {
               <button className="text-white bg-teal-500 border-0 py-2 px-8 focus:outline-none hover:bg-teal-600 rounded text-lg">
                 Submit
               </button>
+
             </form>
+
           </div>
+         {submitted && <h1 className="font-semibold">PLEASE, Go to the service</h1>}
         </div>
       </section>
     </div>
