@@ -1,7 +1,7 @@
 # survey/serializers.py
 
 from rest_framework import serializers
-from .models import SurveyResponse
+from .models import SurveyResponse, Contact
 
 class SurveyResponseSerializer(serializers.ModelSerializer):
     class Meta:
@@ -28,3 +28,8 @@ class SurveyResponseSerializer(serializers.ModelSerializer):
 class LoginSerializer(serializers.Serializer):
     username = serializers.CharField()
     password = serializers.CharField(style={'input_type': 'password'}, write_only=True)
+
+class ContactSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Contact
+        fields = '__all__'

@@ -29,6 +29,14 @@ export default function Home() {
                     <img className="w-1/2" src={home1} alt="image1" />
                 </div>
             </aside>
+
+
+            <div className="grid  place-items-center sm:mt-20">
+                <img className="sm:w-96 w-48" src="https://i.ibb.co/2M7rtLk/Remote1.png" alt="image2" />
+            </div>
+
+            <h1 className="text-center text-2xl sm:text-5xl py-10 font-medium"></h1>
+
         </div>
         <Service />
         </div>

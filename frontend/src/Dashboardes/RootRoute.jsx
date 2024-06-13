@@ -9,12 +9,10 @@
     import ClientService from './ClientService/ClientService'
     import bgImage from './assets/bg.png';
     import Dashboard from './Dashboard/Dashboard';
-import Assessment from './Assessment/Assessment';
+    import Assessment from './Assessment/Assessment';
     
 
     function  RootRoute() {
-      const [count, setCount] = useState(0)
-    
       return (
         <div>
         <Dashboard />
