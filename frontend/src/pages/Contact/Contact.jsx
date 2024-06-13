@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axiosInstance from './axiosConfig'; 
+import axiosInstance from './axiosConfig';  // Adjust path as needed
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -14,7 +14,7 @@ const ContactForm = () => {
       const response = await axiosInstance.post('/api/contact/', formData);
       console.log('Form submitted successfully', response.data);
       setFormData({ email: '', message: '' });
-      setError(null);
+      setError(null); // Reset any previous errors
     } catch (error) {
       console.error('Error submitting the form', error);
       setError('Failed to submit the form. Please try again later.');

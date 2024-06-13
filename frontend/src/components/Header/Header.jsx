@@ -12,10 +12,7 @@ return (
         <header className="shadow sticky z-50 top-0 h-24 " style={{ backgroundImage: `url(${bgImage})` }} >
         <nav className=" border-gray-200 px-4 lg:px-6 py-2.5">
             <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl pt-5">
-                <Link to="/" className="display-block vertical-align-middle pt-0">
-                    <img
-                    src={Logo} alt='Logo' />
-                </Link>
+               
                 <Link to="/" className="flex items-center">
                 <img className="w-1/2" src={logo} alt="image1" />
 
@@ -70,9 +67,6 @@ return (
                                     `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-teal-300" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-teal-300 lg:p-0`
                                 }
                             >
-
-                                Blog
-                                
                                 CONTACTS
 
                             </NavLink>
