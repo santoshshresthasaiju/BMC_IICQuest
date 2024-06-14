@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import bgImage from "../../assets/bg.png";
 import service3 from "../../assets/service3.jpeg";
+import { Link, NavLink } from "react-router-dom";
+
 
 export default function ClientService() {
   const [formData, setFormData] = useState({
@@ -84,11 +86,20 @@ export default function ClientService() {
               <button className="text-white bg-teal-500 border-0 py-2 px-8 focus:outline-none hover:bg-teal-600 rounded text-lg">
                 Submit
               </button>
-
+              {submitted && <h1 className="font-semibold"> <NavLink
+                  to="/assessment"
+                  className={({ isActive }) =>
+                    `block py-2 pr-4 pl-3 duration-200 ${
+                      isActive ? "text-teal-300" : "text-gray-700"
+                    } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-teal-300 lg:p-0`
+                  }
+                >
+                  PLEASE, Go to the ASSESSMENT
+                </NavLink></h1>}
             </form>
 
           </div>
-         {submitted && <h1 className="font-semibold">PLEASE, Go to the service</h1>}
+        
         </div>
       </section>
     </div>
